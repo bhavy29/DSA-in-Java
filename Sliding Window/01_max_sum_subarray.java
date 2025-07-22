@@ -1,4 +1,5 @@
-// Maximum Sum Subarray of Size K
+// Maximum Sum Subarray of Size K.
+
 /* Problem Statement:
       Given an array Arr of size N and an integer K, return the maximum sum of any contiguous subarray of size K.  */
 
