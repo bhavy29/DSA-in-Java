@@ -2,6 +2,7 @@ package Arr;
 
 public class BinarySearch {
 
+    // We can also solve using recursive method 
     public static int BinarySrc(int arr[],int key){
         int si = 0;
         int ei = arr.length-1;
