@@ -1,0 +1,42 @@
+// LC 018
+
+class Solution {
+    public List<List<Integer>> fourSum(int[] nums, int target) {
+        Arrays.sort(nums);
+        List<List<Integer>> res = new ArrayList<>();
+        long newTarget = (long)target;
+        for (int i = 0; i < nums.length; i++) {
+            if (i > 0 && nums[i] == nums[i - 1]) {
+                continue;
+            }
+
+            long diff = newTarget - nums[i];
+
+            // perform 3 sum
+            for (int j = i + 1; j < nums.length - 1; j++) {
+                if (j > i+1 && nums[j] == nums[j - 1]) {
+                    continue;
+                }
+                int l = j + 1;
+                int r = nums.length - 1;
+                while (l < r) {
+                    long sum = (long) nums[j] + nums[l] + nums[r];
+                    if (sum == diff) {
+                        res.add(Arrays.asList(nums[i], nums[j], nums[l], nums[r]));
+                        while (l < r && nums[l] == nums[l + 1])
+                            l++;
+                        while (l < r && nums[r] == nums[r - 1])
+                            r--;
+                        l++;
+                        r--;
+                    } else if (sum > diff) {
+                        r--;
+                    } else {
+                        l++;
+                    }
+                }
+            }
+        }
+        return res;
+    }
+}
