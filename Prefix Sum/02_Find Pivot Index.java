@@ -1,4 +1,4 @@
-// LC 724. Find Pivot Index
+// LC 724. Find Pivot Index AND LC 1991. Find the Middle Index in Array
 
 class Solution {
     public int pivotIndex(int[] nums) {
