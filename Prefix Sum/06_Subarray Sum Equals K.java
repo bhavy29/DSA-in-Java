@@ -1,4 +1,4 @@
-// 560. Subarray Sum Equals K
+// 560. Subarray Sum Equals K AND 930. Binary Subarrays With Sum
 
 class Solution {
     public int subarraySum(int[] nums, int k) {
