@@ -4,6 +4,8 @@
 // 1s --> low to mid-1
 // 2s --> high to n-1
 
+// DNF Sorting Algorithm
+
 class Solution {
     public void sortColors(int[] nums) {
         int m = 0;
